@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="bai6.js"></script>
+    <style>
+       table {
+        margin-right: auto;
+           margin-left: auto;
+           width: 400px;
+           border-collapse: collapse;
+       }
+       table, th {
+           border: 1px solid;
+       }
+       th{
+           height: 40px;
+           width: 100px;
+       }
+       button {
+           width: 90px;
+           height: 35px;
+       }
+       input{
+           width: 390px;
+           height: 35px;
+       }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="4"><input id="dulieu" type="text"></th>
+    </tr>
+    <tr style="background-color: blue">
+        <th><button onclick="inputCal('(')">(</button></th>
+        <th><button onclick="inputCal(')')">)</button></th>
+        <th><button>%</button></th>
+        <th><button onclick="AC()">AC</button></th>
+    </tr>
+    <tr>
+        <th><button onclick="inputCal(7)">7</button></th>
+        <th><button onclick="inputCal(8)">8</button></th>
+        <th><button onclick="inputCal(9)">9</button></th>
+        <th style="background-color: yellow"><button onclick="inputCal('/')">/</button></th>
+    </tr>
+    <tr>
+        <th><button onclick="inputCal(4)">4</button></th>
+        <th><button onclick="inputCal(5)">5</button></th>
+        <th><button onclick="inputCal(6)">6</button></th>
+        <th style="background-color: yellow"><button onclick="inputCal('*')">x</button></th>
+    </tr>
+    <tr>
+        <th><button onclick="inputCal(1)">1</button></th>
+        <th><button onclick="inputCal(2)">2</button></th>
+        <th><button onclick="inputCal(3)">3</button></th>
+        <th style="background-color: yellow"><button onclick="inputCal('-')">-</button></th>
+    </tr>
+    <tr>
+        <th><button onclick="inputCal(0)">0</button></th>
+        <th><button onclick="inputCal('.')">.</button></th>
+        <th><button onclick="result()">=</button></th>
+        <th style="background-color: yellow"><button onclick="inputCal('+')">+</button></th>
+    </tr>
+</table>
+
+<script>
+    function inputCal(input) {
+        let result = document.getElementById('dulieu').value += input
+        console.log('result==>', result)
+
+    }
+    function AC(){
+        document.getElementById('dulieu').value = ' '
+    }
+    function result(){
+        let input = document.getElementById('dulieu').value
+        let result = eval(input)
+        console.log('kq==>',result)
+        document.getElementById('dulieu').value = result
+    }
+    // let a = parseInt(prompt('nhap a'))
+    // let b = parseInt(prompt('nhap b'))
+    // if ((a+b)<4){
+    //     alert('result = Blow')
+    // } else { alert('result = Over')}
+    // if (browser == 'Edge') {
+    //     alert("You've got the Edge!");
+    // } else if (browser == 'Chrome' || browser == 'Firefox' || browser == 'Safari' || browser == 'Opera') {
+    //     alert('Okay we support these browsers too');
+    // } else {
+    //     alert('We hope that this page looks ok!');
+    // }
+    // switch (Browser){
+    //     case == 'Edge'
+    //         alert("you 've got the Edge")
+    //         break
+    //     case == 'chrome'
+    //         case =='firefox'
+    //         case == 'safari'
+    //         case == 'opera'
+    //         alert('oke')
+    //         break;
+    //     default
+    //         alert('cut')
+    // }
+
+    // let value = prompt('Enter your name')
+    // let password = prompt('pass')
+    // // console.log('value ==>', value.trim()==='')
+    // if (value == 'admin'){
+    //     if ( password == 'themaster'){
+    //         alert("welcome")
+    //     } else {
+    //         alert('wrong')
+    //     }
+    // }else {
+    //     alert('do not known you')
+    // }
+
+
+//     let value = parseInt(prompt('are you from VN'))
+//     if (value == '1'){
+// alert('Right!')
+//     } else {
+//         alert('lua dao')
+//     }
+    // document.write('&radic')
+    // alert('xin chao')
+    // alert('&radic')
+    // let year = parseInt(prompt('enter a year'))
+    // if (year % 100 == 0){
+    //     if(year % 400 == 0){
+    //         alert('is leap year')
+    //     } else {
+    //         alert("is not leap year")
+    //     }
+    // } else if (year % 4 == 0){
+    //     alert("is leap hear")
+    // } else {
+    //     alert('is not leap year')
+    // }
+//     if (year % 100 == 0){
+// if (year % 400 == 0){
+// alert('is Leap Year');
+// } else ('is not Leap Year');
+//     else (year % 4 ==0){
+//             alert('is Leap Year');
+//         } alert('is not Leap Year');
+//     }
+</script>
+</body>
+</html>
